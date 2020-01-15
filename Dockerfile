@@ -5,6 +5,7 @@ LABEL maintainer="sameer@damagehead.com"
 ENV APT_CACHER_NG_VERSION=3.1 \
     APT_CACHER_NG_CACHE_DIR=/var/cache/apt-cacher-ng \
     APT_CACHER_NG_LOG_DIR=/var/log/apt-cacher-ng \
+    APT_CACHER_NG_OFFLINE=0 \
     APT_CACHER_NG_USER=apt-cacher-ng
 
 RUN apt-get update \
