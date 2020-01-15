@@ -23,6 +23,9 @@ create_pid_dir
 create_cache_dir
 create_log_dir
 
+# Change offline status via environment variable
+sed "s/# Offlinemode: 0/Offlinemode: ${APT_CACHER_NG_OFFLINE}/" -i /etc/apt-cacher-ng/acng.conf
+
 # allow arguments to be passed to apt-cacher-ng
 if [[ ${1:0:1} = '-' ]]; then
   EXTRA_ARGS="$@"
